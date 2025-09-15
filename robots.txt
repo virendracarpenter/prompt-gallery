@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prompt-gallery.lewkcode.com/sitemap.xml
+
+# Disallow admin and other private areas
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay: 10  # Uncomment if you want to limit crawl rate
+
+# Allow all JavaScript and CSS
+Allow: /*.js$
+Allow: /*.css$
+
+# Allow all image files
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+# Allow all font files
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
+
+# Disallow query parameters that don't affect content
+Disallow: /*?*
+
+# Allow specific query parameters that are used for content
+Allow: /*?q=*
+Allow: /*?search=*
+
+# Allow all AJAX requests
+Allow: /*.json$
+Allow: /*.xml$
+
+# Allow all web manifest files
+Allow: /*.webmanifest$
+Allow: /*.json$
+Allow: /*.xml$

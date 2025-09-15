@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover and share the best AI prompts for ChatGPT, GPT-3, and other AI tools. Find creative writing, coding, business, and productivity prompts. Copy with one click!">
+    <meta name="keywords" content="AI prompts, ChatGPT prompts, GPT-3, prompt engineering, AI tools, productivity hacks, creative writing prompts, coding prompts, business AI, prompt gallery">
+    <meta name="author" content="LewkCode">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4361ee">
+    <meta name="twitter:site" content="@lewkcode">
+    <meta name="twitter:creator" content="@lewkcode">
+    <meta property="article:published_time" content="2023-01-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-01-01T00:00:00+00:00">
+    <meta property="article:author" content="LewkCode">
+    <meta property="article:section" content="Technology">
+    <meta property="article:tag" content="AI">
+    <meta property="article:tag" content="Prompts">
+    <meta property="article:tag" content="Productivity">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/feed.xml">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prompt-gallery.lewkcode.com/">
+    <meta property="og:title" content="AI Prompt Gallery | Discover & Share AI Prompts">
+    <meta property="og:description" content="Discover and share the best AI prompts for your projects. Copy with one click and boost your productivity.">
+    <meta property="og:image" content="https://prompt-gallery.lewkcode.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://prompt-gallery.lewkcode.com/">
+    <meta property="twitter:title" content="AI Prompt Gallery | Discover & Share AI Prompts">
+    <meta property="twitter:description" content="Discover and share the best AI prompts for your projects. Copy with one click and boost your productivity.">
+    <meta property="twitter:image" content="https://prompt-gallery.lewkcode.com/images/og-image.jpg">
+    
+    <title>AI Prompt Gallery | Discover & Share AI Prompts</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="canonical" href="https://prompt-gallery.lewkcode.com/">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">AI Prompt Gallery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categories</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center py-5" itemscope itemtype="https://schema.org/WebPage">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">Discover & Share AI Prompts</h1>
+            <p class="lead mb-4">Find the perfect prompt for your next AI project. Click to copy and use instantly!</p>
+            <div class="search-box mx-auto">
+                <input type="text" class="form-control form-control-lg" id="searchInput" placeholder="Search prompts...">
+                <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5" itemscope itemtype="https://schema.org/ItemList">
+        <div class="container">
+            <!-- Categories -->
+            <section id="categories" class="mb-5">
+                <h2 class="section-title mb-4">Categories</h2>
+                <div class="d-flex flex-wrap gap-2 mb-4" id="categoryFilters">
+                    <button class="btn btn-outline-primary active" data-category="all">All</button>
+                    <button class="btn btn-outline-primary" data-category="productivity">Productivity</button>
+                    <button class="btn btn-outline-primary" data-category="creative">Creative</button>
+                    <button class="btn btn-outline-primary" data-category="coding">Coding</button>
+                    <button class="btn btn-outline-primary" data-category="business">Business</button>
+                </div>
+            </section>
+
+            <!-- Prompts Grid -->
+            <section class="row g-4" id="promptsContainer">
+                <!-- Prompts will be dynamically inserted here -->
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2023 AI Prompt Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Prompt copied to clipboard!
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "AI Prompt Gallery",
+      "url": "https://prompt-gallery.lewkcode.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://prompt-gallery.lewkcode.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LewkCode",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://prompt-gallery.lewkcode.com/favicon.svg"
+        }
+      },
+      "description": "Discover and share the best AI prompts for ChatGPT, GPT-3, and other AI tools."
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "WebPage",
+            "url": "https://prompt-gallery.lewkcode.com/#productivity",
+            "name": "Productivity Prompts"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "WebPage",
+            "url": "https://prompt-gallery.lewkcode.com/#coding",
+            "name": "Coding Prompts"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "WebPage",
+            "url": "https://prompt-gallery.lewkcode.com/#creative",
+            "name": "Creative Writing Prompts"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "WebPage",
+            "url": "https://prompt-gallery.lewkcode.com/#business",
+            "name": "Business Prompts"
+          }
+        }
+      ]
+    }
+    </script>
+</body>
+</html>
